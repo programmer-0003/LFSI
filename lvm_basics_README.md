@@ -45,10 +45,13 @@ In modern Linux distributions, mkfs acts as a front-end wrapper. Rather than run
 
 ==============================================================================
 
-you can check any linux programs/commands by typing proceeding "which" command 
+**which**: you can check any linux programs/commands by typing proceeding "which" command 
 
 ==============================================================================
 
+**trunncate**: The truncate command in Linux shrinks or extends the size of a file to a specified byte value without  deleting the file itself.
+
+==============================================================================
 
 Goal:
 
