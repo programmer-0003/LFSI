@@ -45,12 +45,12 @@ In modern Linux distributions, mkfs acts as a front-end wrapper. Rather than run
 
 ==============================================================================
 
-**which**: you can check any linux programs/commands by typing proceeding "which" command 
+**which:** you can check any linux programs/commands by typing proceeding "which" command 
 
 ==============================================================================
 
-**trunncate**: The truncate command in Linux shrinks or extends the size of a file to a specified byte value without  deleting the file itself.
-**command**:	"truncate -s 2G lvm-disk.img"
+**trunncate:** The truncate command in Linux shrinks or extends the size of a file to a specified byte value without  deleting the file itself.
+**command:**	"truncate -s 2G lvm-disk.img"
 
 ==============================================================================
 
@@ -64,11 +64,17 @@ Now, connect it to a loop device:
 
 ***Normally, an operating system reads and writes data in blocks directly to physical storage hardware. A loop device acts as a translation layer. It maps those block-level requests to a single disk image file stored on your existing filesystem. Once linked, Linux can format, partition, and mount that single file just like a real USB stick or hard drive.***
 
-**command**:	"sudo losetup --find --show "$PWD/lvm-disk.img"
+**command:**	"sudo losetup --find --show "$PWD/lvm-disk.img"
 
 ==============================================================================
 
+***Verify the block device***
+***Replace "/dev/loop0" with the actual device name you received (/dev/loop17 in my case)***
 
+**command:** lsblk -o NAME,TYPE,SIZE,FSTYPE,MOUNTPOINTS /dev/loop17 ( use your actual "loopN' number which you received )
+
+***inspect its association with the image:***
+**sudo losetup -l**
 
 ==============================================================================
 
