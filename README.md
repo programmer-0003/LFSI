@@ -1,15 +1,21 @@
-# LFSI
-Linux FileSystem Inspector : this is a small excercise for learning filesystems for both windows and linux, and also a cross platform script that will run both on linux and windows will be done here. extra: it shows Host OS FileSystem, Block File, /proc filesystem, LVM and also able to identify  usb's respective filesystem whenever applicable.
+***CURRENT-STATUS***
+Initial Linux diagnostic shell script (run_commands.sh) implemented and tested on Ubuntu 26.04.01
+System Information and storage details collected using native Linux Utilities.
+Diagnostic report generated in demo_ubuntu_details.txt
+Verified availability of GCC. lsblk, findmnt, blkid and LVM utilities.
+Identified the Ubuntu root filesystem as ext4 on /dev/sda2.
+Initial investigation of block devices, mounted filesystems and loop devices completed.
 
-Please first read README.md file to know the Progress of the LFSI.
+***Pending-Fix***
+Handle LVM discovery when no physical volumes, volume groups or logical volumes are configured.
+Replace empty LVM output sections with meaningful status messages.
+Distinguish between unavailable utilities, unconfigured LVM and actual command execution errors.
+Regenerate and verify the diagnostic report after fixing the script.
 
-============================CURRENT-STATUS==================================
-A simple shell scripts that give system summary for Linux is ready and has experimented on Ubuntu 26.04.01
-
-============================================================================
-***PENDING-FIX***
-
-***i found out that at this moment in our script if lvm is not configured then it shows empty spaces and we are going to fix that. soon***
-============================================================================
-============================NEXT-MOMENTS====================================
-now, we will run for a c language file that will work both on linux and windows by using Native Linux/Windows Programs
+***NEXT-MOMENTS***
+Complete and Verify the pending LVM handling in the Linux diagnostic script.
+Generate a clean and complete Ubuntu diagnostic report.
+Update the project documentation and repository with verified results.
+Begin the C implementation using native Linux utilities.
+Develop the Program Incrementally, beginning with block-device discovery.
+Extend the architecture to support Windows using native Windows utilities.
