@@ -6,5 +6,9 @@ Please first read README.md file to know the Progress of the LFSI.
 ============================CURRENT-STATUS==================================
 A simple shell scripts that give system summary for Linux is ready and has experimented on Ubuntu 26.04.01
 
+============================================================================
+***PENDING-FIX***
+***i found out that at this moment in our script if lvm is not configured then it shows empty spaces and we are going to fix that. soon***
+============================================================================
 ============================NEXT-MOMENTS====================================
 now, we will run for a c language file that will work both on linux and windows by using Native Linux/Windows Programs
