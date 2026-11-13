@@ -1,0 +1,39 @@
+  GNU nano 8.7.1                                                         summary.txt                                                                  
+==================================
+COMMAND INITIATED: uname -a
+==================================
+Linux ubuntu 7.0.0-43-generic #43-Ubuntu SMP PREEMPT_DYNAMIC Fri Oct 23 13:25:25 UTC 2026 x86_64 GNU/Linux
+
+==================================
+COMMAND INITIATED: command -v gcc lsblk findmnt blkid pvs vgs lvs
+==================================
+/usr/bin/gcc
+/usr/bin/lsblk
+/usr/bin/findmnt
+/usr/sbin/blkid
+/usr/sbin/pvs
+/usr/sbin/vgs
+/usr/sbin/lvs
+
+==================================
+COMMAND INITIATED: lsblk -f
+==================================
+NAME   FSTYPE   FSVER            LABEL           UUID                                 FSAVAIL FSUSE% MOUNTPOINTS
+loop0  squashfs 4.0                                                                         0   100% /snap/core24/1643
+loop1  squashfs 4.0                                                                         0   100% /snap/bare/5
+loop2  squashfs 4.0                                                                         0   100% /snap/desktop-security-center/206
+loop3  squashfs 4.0                                                                         0   100% /snap/firmware-updater/226
+loop4  squashfs 4.0                                                                         0   100% /snap/desktop-security-center/151
+loop5  squashfs 4.0                                                                         0   100% /snap/firefox/8763
+loop6  squashfs 4.0                                                                         0   100% /snap/gnome-46-2404/164
+loop7  squashfs 4.0                                                                         0   100% /snap/gtk-common-themes/1535
+loop8  squashfs 4.0                                                                         0   100% /snap/hwctl/123
+loop9  squashfs 4.0                                                                         0   100% /snap/hwctl/131
+loop10 squashfs 4.0                                                                         0   100% /snap/mesa-2404/1839
+loop11 squashfs 4.0                                                                         0   100% /snap/prompting-client/222
+loop12 squashfs 4.0                                                                         0   100% /snap/prompting-client/228
+loop13 squashfs 4.0                                                                         0   100% /snap/snap-store/1390
+loop14 squashfs 4.0                                                                         0   100% /snap/snap-store/1468
+                                                                  [ Read 140 lines ]
+^G Help         ^O Write Out    ^F Where Is     ^K Cut          ^T Execute      ^C Location     M-U Undo        M-A Set Mark    M-] To Bracket
+^X Exit         ^R Read File    ^\ Replace      ^U Paste        ^J Justify      ^/ Go To Line   M-E Redo        M-6 Copy        ^B Where Was
