@@ -8,6 +8,7 @@ A simple shell scripts that give system summary for Linux is ready and has exper
 
 ============================================================================
 ***PENDING-FIX***
+
 ***i found out that at this moment in our script if lvm is not configured then it shows empty spaces and we are going to fix that. soon***
 ============================================================================
 ============================NEXT-MOMENTS====================================
