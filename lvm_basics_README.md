@@ -45,7 +45,8 @@ In modern Linux distributions, mkfs acts as a front-end wrapper. Rather than run
 
 ==============================================================================
 
-**which:** you can check any linux programs/commands by typing proceeding "which" command 
+***which:*** you can check any linux programs/commands
+**command:** "which ProgramNameHere"
 
 ==============================================================================
 
@@ -71,18 +72,37 @@ Now, connect it to a loop device:
 ***Verify the block device***
 ***Replace "/dev/loop0" with the actual device name you received (/dev/loop17 in my case)***
 
-**command:** lsblk -o NAME,TYPE,SIZE,FSTYPE,MOUNTPOINTS /dev/loop17 ( use your actual "loopN' number which you received )
+**command:** "lsblk -o NAME,TYPE,SIZE,FSTYPE,MOUNTPOINTS /dev/loop17 ( use your actual "loopN' number which you received )"
 
 ***inspect its association with the image:***
 **sudo losetup -l**
 
 ==============================================================================
 
+***Set the loop device variable to the device name returned by your "losetup" command. ("/dev/loop17" in my case)***
+
+**command:** "LOOPDEV=/dev/loop17"
+
+==============================================================================
+
+==============================================================================
+
+***initialize it with physical volume command***
+**command:** "sudo pvcreate "$LOOPDEV"
+
+***Expected Output: Physical Volume "/dev/loop17" successfully created.(should show your respective "/dev/loopN")***
+
+***Verify the Physical Volume:***
+**command:** "sudo pvs -o pv_name,vg_name,pv_size,pv_free"
+**command:** "sudo pvdisplay "$LOOPDEV" "
+
+==============================================================================
+
 Goal:
 
-01. Create lvm-disk.img
-02. Attach it to a loop device using losetup.
-03. Initialize the loop device as an LVM Physical Volume.
+01. Create lvm-disk.img	***FINISHED***
+02. Attach it to a loop device using losetup. ***FINISHED***
+03. Initialize the loop device as an LVM Physical Volume. ***FINISHED***
 04.  Create lfsi_vg.
 05.  Create two logical Volumes.
 06.  Format them with ext4 ( modern linux filesystem )
