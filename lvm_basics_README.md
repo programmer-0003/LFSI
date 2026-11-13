@@ -50,6 +50,25 @@ In modern Linux distributions, mkfs acts as a front-end wrapper. Rather than run
 ==============================================================================
 
 **trunncate**: The truncate command in Linux shrinks or extends the size of a file to a specified byte value without  deleting the file itself.
+**command**:	"truncate -s 2G lvm-disk.img"
+
+==============================================================================
+
+==============================================================================
+
+Now, connect it to a loop device:
+
+***A loop device in Linux is a virtual pseudo-device that lets you access a regular file as if it were a physical block device, like a hard drive or SSD. These devices appear under the /dev/ directory with names like /dev/loop0, /dev/loop1, and so on.***
+
+***How It Works***
+
+***Normally, an operating system reads and writes data in blocks directly to physical storage hardware. A loop device acts as a translation layer. It maps those block-level requests to a single disk image file stored on your existing filesystem. Once linked, Linux can format, partition, and mount that single file just like a real USB stick or hard drive.***
+
+**command**:	"sudo losetup --find --show "$PWD/lvm-disk.img"
+
+==============================================================================
+
+
 
 ==============================================================================
 
@@ -62,3 +81,5 @@ Goal:
 05.  Create two logical Volumes.
 06.  Format them with ext4 ( modern linux filesystem )
 07.  Mount them and create test files.
+
+=================================================================================
